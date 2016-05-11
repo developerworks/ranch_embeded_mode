@@ -145,6 +145,16 @@ end
 
 本文的示例代码位于 https://github.com/developerworks/ranch_embeded_mode
 
+另外, 如果你想要给你的项目去另外一个名字, 请执行下面的步骤
+
+```
+git clone https://github.com/developerworks/ex_ranch_server_tasks.git
+cd ex_ranch_server_tasks
+mix archive.build
+mix archive.install                # 输入Y确认
+mix ranch.new <project_name> --sup # 用实际的项目名称替换 <project_name>
+```
+
 独立模式使用`RanchEmbededMode.Supervisor.start_link`启动
 嵌入模式使用`RanchEmbededMode.SupervisorEmbed.start_link`启动
 
