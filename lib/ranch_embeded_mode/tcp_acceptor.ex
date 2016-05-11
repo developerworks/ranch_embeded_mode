@@ -14,4 +14,8 @@ defmodule RanchEmbededMode.TcpAcceptor do
       []
     )
   end
+
+  def stop do
+    :ranch.stop_listener(@config[:listener_name])
+  end
 end
