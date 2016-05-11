@@ -139,13 +139,13 @@ end
 ![图片描述][6]
 
 > **建议**:
-> 在设计监控树的结构, 确保当 `ranch_sup` 挂掉时, 重启所有监听器. 详情请参考 Ranch 官网 Guide 的 [Internal 章节](https://github.com/ninenines/ranch/blob/master/doc/src/guide/internals.asciidoc)了解如何这样做.
+> 在设计监控树的结构方面, 确保当 `ranch_sup` 挂掉时, 重启所有监听器. 详情请参考 Ranch 官网 Guide 的 [Internal 章节](https://github.com/ninenines/ranch/blob/master/doc/src/guide/internals.asciidoc)了解如何这样做.
 
 ## 示例程序
 
 本文的示例代码位于 https://github.com/developerworks/ranch_embeded_mode
 
-另外, 如果你想要给你的项目去另外一个名字, 请执行下面的步骤
+另外, 如果你想要给你的项目取个你喜欢的名字, 请执行下面的步骤
 
 ```
 git clone https://github.com/developerworks/ex_ranch_server_tasks.git
