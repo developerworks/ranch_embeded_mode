@@ -145,7 +145,7 @@ end
 
 ## 示例程序
 
-本文的示例代码位于 https://github.com/developerworks/ranch_embeded_mode,
+本文的示例代码位于 https://github.com/developerworks/ranch_embeded_mode
 独立模式使用`RanchEmbededMode.Supervisor.start_link`启动
 嵌入模式使用`RanchEmbededMode.SupervisorEmbed.start_link`启动
 
