@@ -1,12 +1,10 @@
 # Elixir Ranch: Embedded 模式
 
-https://github.com/ninenines/ranch/blob/master/doc/src/guide/embedded.asciidoc
-
 嵌入模式允许你把 `Ranch` 监听器直接插入到你的监控树中. 如果整个应用程序其他部分挂掉了, 可以闭监听器的方式, 来提供更大的容错控制.
 
 ## 嵌入(Embedding)
 
-要嵌入 Ranch 到应用程序中, 只需要简单地把子进程规范添加到监控树中即可. 在应用程序的一个 `Supervisor` 的 `init/1` 函数中完成这个过程.
+要嵌入 Ranch 到你自己的应用程序中, 只需要简单地把子进程规范添加到监控树中即可. 在应用程序的一个(一般在顶层Supervisor, 如果应用程序比较复杂, 也可能是其他层) `Supervisor` 的 `init/1` 函数中完成这个过程.
 
 对于嵌入, Ranch 要求最少两种类型的子进程规范. 首先,需要添加 `ranch_sup` 到监控树, 只需要一次, 不管使用多少个监听器. 然后需要为每个监听器添加子进程规范.
 
@@ -45,7 +43,7 @@ init([]) ->
 
 ## Elixir 的 Supervisor 实现
 
-嵌入前的 Supervisor
+嵌入前的 `Supervisor`
 
 ```elixir
 require Logger
@@ -79,7 +77,7 @@ end
 
 ![嵌入前 RanchEmbededMode 应用程序监控树结构][2]
 
-嵌入后的 Supervisor
+嵌入后的 `SupervisorEmbed`
 
 ```elixir
 require Logger
@@ -146,14 +144,18 @@ end
 ## 示例程序
 
 本文的示例代码位于 https://github.com/developerworks/ranch_embeded_mode
+
 独立模式使用`RanchEmbededMode.Supervisor.start_link`启动
 嵌入模式使用`RanchEmbededMode.SupervisorEmbed.start_link`启动
 
+## 参考资料
+
+https://github.com/ninenines/ranch/blob/master/doc/src/guide/embedded.asciidoc
 
 
   [1]: https://segmentfault.com/img/bVvy81
   [2]: https://segmentfault.com/img/bVvy87
-  [3]: https://segmentfault.com/img/bVvy9I
+  [3]: https://segmentfault.com/img/bVvzls
   [4]: https://segmentfault.com/img/bVvzdl
   [5]: https://segmentfault.com/img/bVvzf9
   [6]: https://segmentfault.com/img/bVvzgd
