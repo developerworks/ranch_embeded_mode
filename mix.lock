@@ -1,0 +1,4 @@
+%{"exfswatch": {:hex, :exfswatch, "0.1.1"},
+  "exsync": {:hex, :exsync, "0.1.2"},
+  "fs": {:hex, :fs, "0.9.2"},
+  "ranch": {:hex, :ranch, "1.2.1"}}
