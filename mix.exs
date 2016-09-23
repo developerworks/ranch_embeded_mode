@@ -19,7 +19,7 @@ defmodule RanchEmbededMode.Mixfile do
   defp deps do
     [
       {:ranch, "~> 1.2.1"},
-      {:exsync, "~> 0.1.2", only: [:dev]}
+      {:exsync, "~> 0.1.3", only: [:dev]}
     ]
   end
 end
